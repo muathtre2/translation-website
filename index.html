@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style>
+      .from-text {
+        border: 8px outset rgb(222, 192, 241);
+         background-color: rgb(105, 221, 255);
+      }
+      .to-text {
+        background-color: rgb(255, 120, 79);
+        border: 8px outset rgb(166, 52, 70);
+      }
+    </style>
+    <meta charset="utf-8" />
+    <title>Language Translator | muathtre2</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body align="center"style="background-color: rgb(30, 255, 188);">
+    <script>
+      function random_bg_color() {
+      var r = Math.floor(Math.random() * 256);
+      var g = Math.floor(Math.random() * 256);
+      var b = Math.floor(Math.random() * 256);
+      var bgColor = "rgb(" + r + "," + g + "," + b + ")";
+      document.body.style.background = bgColor;
+    }
+    </script>
+    <div class="container">
+      <div class="wrapper">
+        <div class="text-input">
+          <textarea
+            spellcheck="false"
+            class="from-text"
+            placeholder="Enter text"
+          ></textarea>
+          <textarea
+            spellcheck="false"
+            readonly
+            disabled
+            class="to-text"
+            placeholder="Translation"
+          ></textarea>
+        </div>
+        <ul class="controls">
+          <li class="row from">
+            <div class="icons">
+              <i id="from" class="fas fa-volume-up"></i>
+              <i id="from" class="fas fa-copy"></i>
+            </div>
+            <select></select>
+          </li>
+          <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+          <li class="row to">
+            <select></select>
+            <div class="icons">
+              <i id="to" class="fas fa-volume-up"></i>
+              <i id="to" class="fas fa-copy"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <button align="center">Translate Text</button>
+    </div>
+    <br>
+    <script src="lib/countries.js"></script>
+    <script src="lib/script.js"></script>
+    <button align="center"onclick="random_bg_color()">Random Color Background</button>
+  </body>
+</html>
